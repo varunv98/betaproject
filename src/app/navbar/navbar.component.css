@@ -1,0 +1,25 @@
+nav{
+    display: flex;
+    background-color: #808080;
+}
+.one{
+    background: #000000;
+    color: #ffffff;
+    text-align:center;
+}
+.a{
+    color: #ffffff;
+}
+.b{
+    color: #ffffff;
+}
+.c{
+    color: #ffffff;
+}
+/*.spacer1 {
+    flex: 1;
+  }
+.spacer2 {
+    flex: 1;
+  }
+*/
