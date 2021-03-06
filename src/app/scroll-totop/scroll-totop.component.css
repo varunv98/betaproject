@@ -1,0 +1,7 @@
+#gotop{
+    margin-top: 1rem;
+    padding: 15px;
+}
+#gotop:hover{
+    background-color: tomato;
+}

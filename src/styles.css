@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+html, body{
+    color:rgb(225,225,225);
+    background: linear-gradient(to right, black , white );
+    background-size: 100% 50px;
+}
+app-root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+.search-btn{
+    cursor: pointer;
+    margin-top:15px;
+}
+.page-footer{
+    background-color: #333 !important;
+}
+@keyframes slide-in{
+    0%{
+        opacity:0;
+        transform:translateY(-15px) 
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0)
+    }
+}
