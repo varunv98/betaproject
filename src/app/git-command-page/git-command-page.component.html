@@ -1,98 +1,140 @@
-<p>git-command-page works!</p>
-<style>
-    .content {
-      display: flex;
-      margin: 82px auto 32px;
-      padding: 0 16px;
-      max-width: 960px;
-      flex-direction: column;
-      align-items: center;
-    }
-    .terminal {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 6px;
-    padding-top: 45px;
-    margin-top: 8px;
-    overflow: hidden;
-    background-color: rgb(15, 15, 16);
-  }
-
-  .terminal::before {
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: rgb(58, 58, 58);
-    color: #c2c3c4;
-    width: 100%;
-    font-size: 2rem;
-    line-height: 0;
-    padding: 14px 0;
-    text-indent: 4px;
-  }
-
-  .terminal pre {
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-    margin: 0;
-  }
-</style>
-    <div class="content" role="main">
-    <h2>Next Steps</h2>
-    <p>What do you want to do next with your app?</p>
-
-  <input type="hidden" #selection>
-
-  <div class="card-container">
-    <div class="card card-small" (click)="selection.value = 'component'" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-
-      <span>New Component</span>
-    </div>
-
-    <div class="card card-small" (click)="selection.value = 'material'" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-
-      <span>Angular Material</span>
-    </div>
-
-    <div class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-
-      <span>Add PWA Support</span>
-    </div>
-
-    <div class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-
-      <span>Add Dependency</span>
-    </div>
-
-    <div class="card card-small" (click)="selection.value = 'test'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-
-      <span>Run and Watch Tests</span>
-    </div>
-
-    <div class="card card-small" (click)="selection.value = 'build'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-
-      <span>Build for Production</span>
-    </div>
-  </div>
-
-        <div class="terminal" [ngSwitch]="selection.value">
-            <pre *ngSwitchDefault>ng generate component xyz</pre>
-            <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
-            <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
-            <pre *ngSwitchCase="'dependency'">ng add _____</pre>
-            <pre *ngSwitchCase="'test'">ng test</pre>
-            <pre *ngSwitchCase="'build'">ng build --prod</pre>
+<div class="content">
+    <h2>GitHub Commands </h2>
+    <!-- * -->
+    <section>
+      <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4"></h1>
+        <p class="lead">This section is divided into 3 parts <br>
+          Initializing Git Exsisting Project  <br>
+          Push a update of the Project  <br>
+          Deploying Project using Ghpages on Github. </p>
+      </div>
+      </div>
+    </section>
+    <!-- * -->
+    <div class="a">
+      <h4> Initializing Git Exsisting Project </h4>
+      <div class="inside_1">
+        1. Go to <a href="https://github.com/">GitHub</a> and Signup.<br>
+        2. Go to your Terminal or Command-Prompt and localte your directory.<br>
+        3. Initialize empty git repository.<br>
+        4. Git commands for display files which are created newly or edited files but not commited yet.<br>
+        5. Git commands to something all files / folders.<br>
+        6. Git command to commit a file with a message. <br>
+        7. Next, add remote origin.<br>
+        8. In this command we change the git branch from master to main since git has made some changed.<br>
+        9. Finally push project on github.<br>
+      <input type="hidden" #selection>
+      <div class="card-container">
+        <div class="card card-small" (click)="selection.value = 'component'" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>Initialize</span>
         </div>
-</div>  
+        <div class="card card-small" (click)="selection.value = 'one'" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>Display project files status</span>
+        </div>
+        <div class="card card-small" (click)="selection.value = 'two'" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>To something</span>
+        </div>
+        <div class="card card-small" (click)="selection.value = 'three'" tabindex="0">
+          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+        <span>To commit file with message</span>
+      </div>
+        <div class="card card-small" (click)="selection.value = 'four'" tabindex="0">
+          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>Adding remote origin</span>
+        </div>
+        <div class="card card-small" (click)="selection.value = 'five'" tabindex="0">
+          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>Git branch</span>
+        </div>
+        <div class="card card-small" (click)="selection.value = 'sixth'" tabindex="0">
+          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>Push project on github</span>
+        </div>
+      </div>
+      <div class="terminal" [ngSwitch]="selection.value">
+        <pre *ngSwitchDefault>git init</pre>
+        <pre *ngSwitchCase="'one'">git status</pre>
+        <pre *ngSwitchCase="'two'">git add --all</pre>
+        <pre *ngSwitchCase="'three'">git commit -m "message-to-commit"</pre>
+        <pre *ngSwitchCase="'four'">git remote add origin https://github.com/git_username/git_repositoryname.git</pre>
+        <pre *ngSwitchCase="'five'">git branch -M main</pre>
+        <pre *ngSwitchCase="'sixth'">git push -u origin main</pre>
+      </div>
+      </div>
+    </div>
+    <!-- * -->
+    <div class="a">
+      <h4> Push a update of the Project  </h4>
+      <div class="inside_1">
+        1. Go to your Terminal or Command-Prompt and localte your directory.<br>
+        2. Git commands for display files which are created newly or edited files but not commited yet.<br>
+        3. Git commands to something all files / folders.<br>
+        4. Git Git command to commit a file with a message.<br>
+        5. Finally push project on github.<br>
+      <input type="hidden" #selection>
+      <div class="card-container">
+        <div class="card card-small" (click)="selection.value = 'component'" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>Display project files status</span>
+        </div>
+        <div class="card card-small" (click)="selection.value = 'one1'" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>To somthing</span>
+        </div>
+        <div class="card card-small" (click)="selection.value = 'two2'" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>To commit</span>
+        </div>
+        <div class="card card-small" (click)="selection.value = 'three3'" tabindex="0">
+          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>Push project on github</span>
+        </div>
+      </div>
+      <div class="terminal" [ngSwitch]="selection.value">
+        <pre *ngSwitchDefault>git status</pre>
+        <pre *ngSwitchCase="'one1'">git add --all</pre>
+        <pre *ngSwitchCase="'two2'">git commit -m "message-to-commit"</pre>
+        <pre *ngSwitchCase="'three3'">git push -u origin main</pre>
+      </div>
+    </div>
+    </div>
+    <!-- * -->
+    <div class="a">
+      <h4> Deploying Project using Ghpages on Github </h4>
+      <div class="inside_1">
+        1. Go to your Terminal or Command-Prompt and localte your directory.<br>
+        2. Read and Execute all commands from the previous section to make sure git repository is up-to-date.<br>
+        3. Install Ghpages using npm.<br>
+        4. Next command is to build the project in production mode.This command generates a Dist directory.<br>
+        5. Finally this command (explain)<br>
+      <input type="hidden" #selection>
+      <div class="card-container">
+        <div class="card card-small" (click)="selection.value = 'component'" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>Install Ghpages</span>
+        </div>
+        <div class="card card-small" (click)="selection.value = 'one11'" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>Build Project</span>
+        </div>
+        <div class="card card-small" (click)="selection.value = 'two22'" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>NGH Command</span>
+        </div>
+      </div>
+      <div class="terminal" [ngSwitch]="selection.value">
+        <pre *ngSwitchDefault>npm install -g angular-cli-ghpages</pre>
+        <pre *ngSwitchCase="'one11'">ng build --prod --base-href "hhtps://git_username.github.io/git_repositoryname"</pre>
+        <pre *ngSwitchCase="'two22'">ngh --dir dist/folder_name</pre>
+      </div>
+    </div>
+    </div>
+    <!-- * -->
+  </div>  
 
     
